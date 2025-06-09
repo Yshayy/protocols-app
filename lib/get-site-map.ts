@@ -12,7 +12,10 @@ const uuid = !!includeNotionIdInUrls
 export async function getSiteMap(): Promise<types.SiteMap> {
   const partialSiteMap = await getAllPages(
     config.rootNotionPageId,
-    config.rootNotionSpaceId ?? undefined
+    config.rootNotionSpaceId ?? undefined, 
+    {
+      maxDepth: 5
+    }
   )
 
   return {
