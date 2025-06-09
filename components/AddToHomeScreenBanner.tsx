@@ -1,4 +1,5 @@
 import * as React from 'react'
+
 import styles from './styles.module.css';
 
 const getOSInstructions = () => {
@@ -30,7 +31,7 @@ function isInStandaloneMode() {
   return false;
 }
 
-export const AddToHomeScreenBanner: React.FC = () => {
+export function AddToHomeScreenBanner(){
   const [visible, setVisible] = React.useState(false);
   const [osInfo, setOsInfo] = React.useState(getOSInstructions());
 

@@ -22,13 +22,13 @@ import { getCanonicalPageUrl, mapPageUrl } from '@/lib/map-page-url'
 import { searchNotion } from '@/lib/search-notion'
 import { useDarkMode } from '@/lib/use-dark-mode'
 
+import { AddToHomeScreenBanner } from './AddToHomeScreenBanner'
 import { Footer } from './Footer'
 import { Loading } from './Loading'
 import { NotionPageHeader } from './NotionPageHeader'
 import { Page404 } from './Page404'
 import { PageAside } from './PageAside'
 import { PageHead } from './PageHead'
-import { AddToHomeScreenBanner } from './AddToHomeScreenBanner'
 import styles from './styles.module.css'
 
 // -----------------------------------------------------------------------------
