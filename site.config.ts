@@ -2,7 +2,7 @@ import { siteConfig } from './lib/site-config'
 
 export default siteConfig({
   // the site's root Notion page (required)
-  rootNotionPageId: '7875426197cf461698809def95960ebf',
+  rootNotionPageId: '209c4906bc3e805d9f36ea56499ff2aa',
 
   // if you want to restrict pages to a single notion workspace (optional)
   // (this should be a Notion ID; see the docs for how to extract this)
@@ -10,7 +10,7 @@ export default siteConfig({
 
   // basic site info (required)
   name: 'פרוטוקולים',
-  domain: 'showy-november-8e4.notion.site.it',
+  domain: 'protocols-app.vercel.app',
   author: 'Inna',
 
   // open graph metadata (optional)
