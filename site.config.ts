@@ -9,17 +9,19 @@ export default siteConfig({
   rootNotionSpaceId: null,
 
   // basic site info (required)
-  name: 'Next.js Notion Starter Kit',
-  domain: 'nextjs-notion-starter-kit.transitivebullsh.it',
-  author: 'Travis Fischer',
+  name: 'פרוטוקולים',
+  domain: 'showy-november-8e4.notion.site.it',
+  author: 'Inna',
 
   // open graph metadata (optional)
-  description: 'Example Next.js Notion Starter Kit Site',
+  description: 'ריכוז פרוטקולים',
 
   // social usernames (optional)
+  /*
   twitter: 'transitive_bs',
   github: 'transitive-bullshit',
   linkedin: 'fisch2',
+  */
   // mastodon: '#', // optional mastodon profile URL, provides link verification
   // newsletter: '#', // optional newsletter URL
   // youtube: '#', // optional youtube channel name or `channel/UCGbXXXXXXXXXXXXXXXXXXXXXX`
