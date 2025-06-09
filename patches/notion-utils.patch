@@ -1,0 +1,13 @@
+diff --git a/build/index.js b/build/index.js
+index 5014cfbcdb5f15f7ee46798a37e99c16de19a594..35d88453669855063fad3a1f598b23860e02aaa0 100644
+--- a/build/index.js
++++ b/build/index.js
+@@ -519,7 +519,7 @@ function getPageProperty(propertyName, block, recordMap) {
+ // src/normalize-title.ts
+ var normalizeTitle = (title) => {
+   return (title || "").replaceAll(" ", "-").replaceAll(
+-    /[^\dA-Za-z\u3000-\u303F\u3041-\u3096\u30A1-\u30FC\u4E00-\u9FFF\uAC00-\uD7AF-]/g,
++    /[^\dA-Za-z\u0590-\u05FF\u3000-\u303F\u3041-\u3096\u30A1-\u30FC\u4E00-\u9FFF\uAC00-\uD7AF-]/g,
+     ""
+   ).replaceAll("--", "-").replace(/-$/, "").replace(/^-/, "").trim().toLowerCase();
+ };
