@@ -3,9 +3,19 @@
   "short_name": "פרוטוקולים - כירורגית",
   "icons": [
     {
-      "src": "icon.svg",
+      "src": "/icon.svg",
       "type": "image/svg+xml",
       "sizes": "any"
+    },
+    {
+      "src": "/icon-256.png",
+      "type": "image/png",
+      "sizes": "256x256"
+    },
+    {
+      "src": "/icon-512.png",
+      "type": "image/png",
+      "sizes": "512x512"
     }
   ],
   "theme_color": "#000000",
