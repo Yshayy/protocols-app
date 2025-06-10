@@ -11,7 +11,7 @@ export default siteConfig({
   // basic site info (required)
   name: 'פרוטוקולים',
   domain: 'protocols-app.vercel.app',
-  author: 'Inna',
+  author: 'כירורגית שניידר',
 
   // open graph metadata (optional)
   description: 'ריכוז פרוטקולים',
