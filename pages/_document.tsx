@@ -7,12 +7,14 @@ export default class MyDocument extends Document {
       <IconContext.Provider value={{ style: { verticalAlign: 'middle' } }}>
         <Html lang='en'>
           <Head>
-            <link rel='shortcut icon' href='/icon.svg' type="image/svg+xml" />
+            <link rel='shortcut icon' sizes="256x256" href="/icon-256.png" />
             <link
               rel='icon'
               type='image/svg+xml'
               href='/icon.svg'
             />
+            <link rel="apple-touch-icon" sizes="256x256" href="/icon-256.png" />
+
 
             <link rel='manifest' href='/manifest.json' />
           </Head>
