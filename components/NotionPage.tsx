@@ -23,13 +23,13 @@ import { searchNotion } from '@/lib/search-notion'
 import { useDarkMode } from '@/lib/use-dark-mode'
 
 import { AddToHomeScreenBanner } from './AddToHomeScreenBanner'
+import FeedbackForm from './FeedbackForm'
 import { Footer } from './Footer'
 import { Loading } from './Loading'
 import { NotionPageHeader } from './NotionPageHeader'
 import { Page404 } from './Page404'
 import { PageAside } from './PageAside'
 import { PageHead } from './PageHead'
-import FeedbackForm from './FeedbackForm'
 import styles from './styles.module.css'
 
 // -----------------------------------------------------------------------------
