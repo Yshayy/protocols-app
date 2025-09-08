@@ -403,3 +403,10 @@
 .notion-equation.notion-equation-block{
   align-items: center;
 }
+
+.notion-page-title .notion-page-icon-inline {
+  margin-left: 0;
+  margin-right: 0;
+  margin-inline-start: 2px;
+  margin-inline-end: 6px;
+}
