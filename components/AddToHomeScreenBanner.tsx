@@ -1,4 +1,5 @@
-import * as React from 'react'
+import { useRouter } from 'next/router';
+import * as React from 'react';
 
 import styles from './styles.module.css';
 
@@ -32,18 +33,42 @@ function isInStandaloneMode() {
 }
 
 export function AddToHomeScreenBanner(){
+  const router = useRouter();
   const [visible, setVisible] = React.useState(false);
   const [osInfo, setOsInfo] = React.useState(getOSInstructions());
 
   React.useEffect(() => {
     if (typeof window === 'undefined') return;
+
+    // Check if banner has already been shown in this session
+    const hasBeenShown = sessionStorage.getItem('addToHomeBannerShown');
+    if (hasBeenShown) return;
+
     // Only show on mobile, not in standalone mode
     const isMobile = /android|iphone|ipad|ipod/i.test(window.navigator.userAgent);
     if (isMobile && !isInStandaloneMode()) {
       setVisible(true);
       setOsInfo(getOSInstructions());
+      sessionStorage.setItem('addToHomeBannerShown', 'true');
     }
   }, []);
+
+  // Close banner on route change
+  React.useEffect(() => {
+    const handleRouteChange = () => {
+      setVisible(false);
+    };
+
+    router.events.on('routeChangeStart', handleRouteChange);
+
+    return () => {
+      router.events.off('routeChangeStart', handleRouteChange);
+    };
+  }, [router.events]);
+
+  const handleClose = () => {
+    setVisible(false);
+  };
 
   if (!visible) return null;
 
@@ -52,7 +77,7 @@ export function AddToHomeScreenBanner(){
       <span>
         להוספת האפליקציה למסך הבית: <b>{osInfo.instructions}</b>
       </span>
-      <button className={styles.closeBtn} onClick={() => setVisible(false)} aria-label="סגור באנר">×</button>
+      <button className={styles.closeBtn} onClick={handleClose} aria-label="סגור באנר">×</button>
     </div>
   );
 };
